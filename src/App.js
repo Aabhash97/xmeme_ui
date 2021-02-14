@@ -11,7 +11,6 @@ import Grid from "@material-ui/core/Grid";
 import FormComponenet from "./Components/FormComponent";
 import React from "react";
 import Divider from "@material-ui/core/Divider";
-import "semantic-ui-css/semantic.min.css";
 import ImageFeed from "./Components/ImageFeed";
 import FooterComponenet from "./Components/FooterComponenet";
 import UpdateComponent from "./Components/UpdateComponent";
