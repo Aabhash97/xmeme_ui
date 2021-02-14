@@ -63,42 +63,35 @@ export default function ImageFeed() {
         justify="flex-start"
         alignItems="flex-start"
       >
-        {memes
-          .slice(0)
-          .reverse()
-          .map((meme) => (
-            <Grid item xs={3}>
-              <Card className={classes.root}>
-                <CardHeader
-                  avatar={
-                    <Avatar aria-label="Name" className={classes.avatar}>
-                      {meme.name.charAt(0)}
-                    </Avatar>
-                  }
-                  action={<UpdateComponent id={meme.id} />}
-                  title={meme.name}
-                />
+        {memes.map((meme) => (
+          <Grid item xs={3}>
+            <Card className={classes.root}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="Name" className={classes.avatar}>
+                    {meme.name.charAt(0)}
+                  </Avatar>
+                }
+                action={<UpdateComponent id={meme.id} />}
+                title={meme.name}
+              />
 
-                <CardMedia
-                  className={classes.media}
-                  image={meme.url}
-                  title={meme.name + "'s Meme"}
-                />
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {meme.caption}
-                  </Typography>
-                </CardContent>
-                <CardActions disableSpacing>
-                  <ReactingComponent />
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
+              <CardMedia
+                className={classes.media}
+                image={meme.url}
+                title={meme.name + "'s Meme"}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {meme.caption}
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <ReactingComponent />
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </div>
   ));
