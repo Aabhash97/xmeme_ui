@@ -4,19 +4,19 @@ import React, { Component } from "react";
 const emojis = [
   {
     name: "rage",
-    count: 0,
+    count: 1,
   },
   {
     name: "blush",
-    count: 0,
+    count: 2,
   },
   {
     name: 100,
-    count: 0,
+    count: 3,
   },
   {
     name: "grinning",
-    count: 0,
+    count:2,
   },
 ];
 
